@@ -1,0 +1,69 @@
+
+* { box-sizing: border-box; }
+:root { --bg:#0e0f12; --panel:#14161b; --line:#222; --muted:#b6bcc6; --text:#f0f2f5; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Arial, sans-serif; background:var(--bg); color:var(--text); }
+
+.page-header { position: sticky; top:0; z-index: 1000; backdrop-filter: blur(6px); background: rgba(14,15,18,0.8); border-bottom:1px solid var(--line); }
+.page-header .wrap { max-width: 980px; margin: 0 auto; padding: 16px 12px; text-align:center; }
+.page-header h1 { margin:0; font-size:22px; }
+.page-header p { margin:4px 0 0; color:var(--muted); }
+
+.tabs { display:flex; gap:8px; padding:10px 12px; flex-wrap:wrap; justify-content:center; position: sticky; top:66px; background:var(--bg); border-bottom:1px solid var(--line); z-index: 900; }
+.tab { border:1px solid #333; background:#17181d; color:#e7ebf0; padding:10px 14px; border-radius:10px; cursor:pointer; font-weight:600; }
+.tab.active { border-color:#5b9cff; outline: none; }
+.tab:focus { outline: 2px solid #5b9cff; }
+
+.container { max-width: 980px; margin: 18px auto; padding: 0 12px; } /* centralizado */
+.card { background:var(--panel); border:1px solid var(--line); border-radius:12px; margin-bottom:16px; transition: box-shadow .2s, border-color .2s; }
+.card.completed { border-color:#00C853; box-shadow: 0 0 0 2px rgba(0,200,83,.15), 0 8px 28px rgba(0,0,0,.25); }
+.card h2 { margin:0; padding:14px 16px; border-bottom:1px solid var(--line); font-size:18px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+
+.progress-day { width: 260px; height: 8px; background:#1f2228; border:1px solid #2a2e36; border-radius:10px; overflow:hidden; }
+.progress-day .bar { height:100%; width:0; background:#5b9cff; }
+
+.table-wrap { width:100%; overflow: visible; position: relative; z-index:0; }
+
+table { width:100%; border-collapse: collapse; }
+th, td { padding: 12px 10px; text-align: center; border-bottom:1px solid #23262d; }
+th {
+  background:#1a1d23;
+  color:#c9d1d9;
+  font-weight:700;
+  position: sticky;
+  top: 120px;
+  z-index: 999;
+  box-shadow: 0 2px 0 #23262d;
+}
+
+tbody td { position: relative; z-index: 1; }
+tbody td .badge, tbody td .progress { position: relative; z-index: 1; }
+
+.badge { display:inline-block; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:700; color:#0e0f12; white-space:nowrap; }
+
+.progress { margin-top:6px; height:6px; background:#1f2228; border-radius:10px; overflow:hidden; border:1px solid #2a2e36; }
+.progress > .bar { height:100%; width:0; background:#5b9cff; }
+
+.legend { display:flex; gap:10px; flex-wrap:wrap; margin: 8px 16px; }
+.legend .item { display:flex; align-items:center; gap:8px; font-size:12px; color:#b6bcc6; }
+.legend .swatch { width:14px; height:14px; border-radius:4px; display:inline-block; border:1px solid #333; }
+
+.controls { display:flex; gap:10px; align-items:center; }
+.controls button { background:#1c2027; border:1px solid #2a2e36; color:#e7ebf0; padding:8px 12px; border-radius:10px; cursor:pointer; }
+.controls button:hover { border-color:#5b9cff; }
+
+.todo { width:24px; height:24px; border:1px solid #2a2e36; border-radius:6px; display:inline-flex; align-items:center; justify-content:center; cursor:pointer; background:#17181d; }
+.todo.checked { background:#00C853; border-color:#00C853; color:#0e0f12; font-weight:800; }
+
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: 16px; background:#14161b; color:#e7ebf0; border:1px solid #2a2e36; padding:10px 14px; border-radius:10px; box-shadow: 0 10px 30px rgba(0,0,0,.35); opacity:0; pointer-events:none; transition: opacity .2s, transform .2s; z-index: 2000; }
+.toast.show { opacity:1; transform: translateX(-50%) translateY(-6px); }
+
+footer { text-align:center; padding:20px; color:#8a93a0; border-top:1px solid var(--line); margin-top:24px; } /* centralizado */
+
+/* Mobile */
+@media (max-width: 480px) {
+  th, td { padding: 10px 6px; font-size: 14px; }
+  .badge { font-size: 11px; }
+  .progress { height: 5px; }
+  .progress-day { width: 180px; }
+  th { top: 116px; }
+}

@@ -1,0 +1,22 @@
+{
+  "Segunda": [
+    {
+      "exercicio": "Manguito",
+      "series": "3x12",
+      "obs": "Aquecimento",
+      "cor": "#00C853"
+    },
+    {
+      "exercicio": "Supino na Barra guiada",
+      "series": "4x10",
+      "obs": "Aquecimento",
+      "cor": "#00C853"
+    },
+    {
+      "exercicio": "Polia barra",
+      "series": "4x10",
+      "obs": "Aumenta a carga",
+      "cor": "#FF5252"
+    }
+  ]
+}
