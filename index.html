@@ -307,6 +307,102 @@
 
     
     /* ── CARD UNIFICADO DO ATLETA (TUDO JUNTO NO MESMO BLOCO) ── */
+    
+    /* ── AVATAR DO ATLETA ── */
+    .athlete-avatar-badge {
+      width: 48px; height: 48px;
+      background: #141b26;
+      border: 2px solid var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      overflow: hidden;
+      box-shadow: 0 0 12px var(--orange-glow);
+      flex-shrink: 0;
+    }
+    .athlete-avatar-badge img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .avatar-upload-card {
+      background: var(--card-inner);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .avatar-preview-box {
+      width: 58px; height: 58px;
+      border-radius: 50%;
+      background: #141b26;
+      border: 2px solid var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 0 14px var(--orange-glow);
+    }
+    .avatar-preview-box img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .avatar-upload-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      flex: 1;
+    }
+    .btn-avatar-pick {
+      background: var(--orange-dim);
+      border: 1px solid var(--orange);
+      color: #ff9142;
+      padding: 7px 12px;
+      border-radius: var(--radius-sm);
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+      transition: all .2s;
+    }
+    .btn-avatar-pick:hover {
+      background: var(--orange);
+      color: #000;
+    }
+    .btn-avatar-remove {
+      background: none;
+      border: none;
+      color: var(--red);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 2px 0;
+      width: fit-content;
+    }
+    .btn-avatar-remove:hover { text-decoration: underline; }
+    .avatar-tip {
+      font-size: 9px;
+      color: var(--text-muted);
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
     .athlete-card-unified {
       background: linear-gradient(135deg, rgba(18, 24, 34, 0.95), rgba(12, 16, 23, 0.92));
       border: 1px solid var(--border-lit);
@@ -1072,6 +1168,102 @@
 
     
     /* ── CARD UNIFICADO DO ATLETA (TUDO JUNTO NO MESMO BLOCO) ── */
+    
+    /* ── AVATAR DO ATLETA ── */
+    .athlete-avatar-badge {
+      width: 48px; height: 48px;
+      background: #141b26;
+      border: 2px solid var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      overflow: hidden;
+      box-shadow: 0 0 12px var(--orange-glow);
+      flex-shrink: 0;
+    }
+    .athlete-avatar-badge img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .avatar-upload-card {
+      background: var(--card-inner);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .avatar-preview-box {
+      width: 58px; height: 58px;
+      border-radius: 50%;
+      background: #141b26;
+      border: 2px solid var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 0 14px var(--orange-glow);
+    }
+    .avatar-preview-box img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .avatar-upload-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      flex: 1;
+    }
+    .btn-avatar-pick {
+      background: var(--orange-dim);
+      border: 1px solid var(--orange);
+      color: #ff9142;
+      padding: 7px 12px;
+      border-radius: var(--radius-sm);
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+      transition: all .2s;
+    }
+    .btn-avatar-pick:hover {
+      background: var(--orange);
+      color: #000;
+    }
+    .btn-avatar-remove {
+      background: none;
+      border: none;
+      color: var(--red);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 2px 0;
+      width: fit-content;
+    }
+    .btn-avatar-remove:hover { text-decoration: underline; }
+    .avatar-tip {
+      font-size: 9px;
+      color: var(--text-muted);
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
     .athlete-card-unified {
       background: linear-gradient(135deg, rgba(18, 24, 34, 0.95), rgba(12, 16, 23, 0.92));
       border: 1px solid var(--border-lit);
@@ -1314,7 +1506,7 @@
   <!-- 1. CARD UNIFICADO DO ATLETA (NOME, IDADE, PESO E IMC TODOS JUNTOS) -->
   <div class="athlete-card-unified" onclick="openProfileModal()">
     <div class="athlete-avatar-col">
-      <div class="athlete-avatar-badge">👤</div>
+      <div class="athlete-avatar-badge" id="athleteAvatarBadge">👤</div>
     </div>
     <div class="athlete-info-col">
       <div class="athlete-name-row">
@@ -1397,7 +1589,20 @@
   <div class="modal-dialog">
     <div class="modal-head">
       <h2>Perfil do Atleta</h2>
-      <p>Gerencie peso, altura e faça backup das suas cargas.</p>
+      <p>Personalize sua foto, nome, idade e métricas corporais.</p>
+    </div>
+
+    <!-- FOTO DE PERFIL DO ATLETA -->
+    <div class="avatar-upload-card">
+      <div class="avatar-preview-box" id="modalAvatarPreview">👤</div>
+      <div class="avatar-upload-actions">
+        <label class="btn-avatar-pick">
+          📷 Escolher Foto
+          <input type="file" id="inputAvatarFile" accept="image/*" style="display:none" onchange="handleAvatarUpload(event)">
+        </label>
+        <button class="btn-avatar-remove" id="btnRemoveAvatar" onclick="removeAvatarPhoto()" style="display:none;">Remover Foto</button>
+        <div class="avatar-tip">JPG ou PNG (fica salva no seu aparelho)</div>
+      </div>
     </div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
@@ -1607,8 +1812,8 @@ function saveHistory(h){ localStorage.setItem(K_HISTORY, JSON.stringify(h)); }
 function loadProfile(){
   try {
     const raw = localStorage.getItem(K_PROFILE);
-    return raw ? JSON.parse(raw) : { nome: '', idade: '', peso: '', altura: '' };
-  } catch(e) { return { nome: '', idade: '', peso: '', altura: '' }; }
+    return raw ? JSON.parse(raw) : { nome: '', idade: '', peso: '', altura: '', avatar: '' };
+  } catch(e) { return { nome: '', idade: '', peso: '', altura: '', avatar: '' }; }
 }
 function saveProfile(p){ localStorage.setItem(K_PROFILE, JSON.stringify(p)); }
 
@@ -2284,6 +2489,7 @@ function updateMetricsSummary(vol = 0, sets = 0){
   const imcLabel = document.getElementById('athleteCardImcLabel');
 
   if(nameEl) nameEl.textContent = p.nome ? p.nome.toUpperCase() : 'ATLETA';
+  updateAvatarDisplays(p.avatar || '');
   if(ageEl) {
     if(p.idade){
       ageEl.textContent = `${p.idade} ANOS`;
@@ -2351,12 +2557,75 @@ function openModal(id){ document.getElementById(id).classList.add('open'); }
 function closeModal(id){ document.getElementById(id).classList.remove('open'); }
 function handleModalClick(e, id){ if(e.target === document.getElementById(id)) closeModal(id); }
 
+
+// ── UPLOAD E REDIMENSIONAMENTO DE FOTO DE PERFIL (100% OFFLINE) ──
+function handleAvatarUpload(event){
+  const file = event.target.files[0];
+  if(!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(e){
+    const img = new Image();
+    img.onload = function(){
+      // Redimensiona para um quadrado perfeito de 200x200 no Canvas (otimiza tamanho no localStorage)
+      const canvas = document.createElement('canvas');
+      const size = 200;
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext('2d');
+
+      // Crop centralizado circular
+      const minDim = Math.min(img.width, img.height);
+      const sx = (img.width - minDim) / 2;
+      const sy = (img.height - minDim) / 2;
+
+      ctx.drawImage(img, sx, sy, minDim, minDim, 0, 0, size, size);
+      const base64Avatar = canvas.toDataURL('image/jpeg', 0.85);
+
+      // Salva no perfil
+      const p = loadProfile();
+      p.avatar = base64Avatar;
+      saveProfile(p);
+
+      updateAvatarDisplays(base64Avatar);
+      showGymToast('Foto atualizada! 📸');
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+function removeAvatarPhoto(){
+  const p = loadProfile();
+  delete p.avatar;
+  saveProfile(p);
+  updateAvatarDisplays('');
+  showGymToast('Foto removida.');
+}
+
+function updateAvatarDisplays(avatarUrl){
+  const cardBadge = document.getElementById('athleteAvatarBadge');
+  const modalPreview = document.getElementById('modalAvatarPreview');
+  const removeBtn = document.getElementById('btnRemoveAvatar');
+
+  if(avatarUrl){
+    if(cardBadge) cardBadge.innerHTML = `<img src="${avatarUrl}" alt="Foto de Perfil">`;
+    if(modalPreview) modalPreview.innerHTML = `<img src="${avatarUrl}" alt="Foto de Perfil">`;
+    if(removeBtn) removeBtn.style.display = 'block';
+  } else {
+    if(cardBadge) cardBadge.innerHTML = '👤';
+    if(modalPreview) modalPreview.innerHTML = '👤';
+    if(removeBtn) removeBtn.style.display = 'none';
+  }
+}
+
 function openProfileModal(){
   const p = loadProfile();
   document.getElementById('inputProfileName').value = p.nome || '';
   document.getElementById('inputProfileAge').value = p.idade || '';
   document.getElementById('inputProfileWeight').value = p.peso || '';
   document.getElementById('inputProfileHeight').value = p.altura || '';
+  updateAvatarDisplays(p.avatar || '');
   openModal('modalProfile');
 }
 
