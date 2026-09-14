@@ -401,6 +401,90 @@
       font-family: 'Space Grotesk', sans-serif;
     }
 
+    
+    /* ── FOTO DE PERFIL NO MODAL E NO CARD ── */
+    .avatar-edit-box {
+      background: var(--card-inner);
+      border: 1px solid var(--border-lit);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .avatar-preview-ring {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #141b26;
+      border: 2px solid var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 0 14px var(--orange-glow);
+      cursor: pointer;
+      position: relative;
+    }
+    .avatar-preview-ring img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
+    .avatar-edit-info {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+    .btn-pick-photo {
+      background: linear-gradient(135deg, rgba(255, 107, 0, 0.25), rgba(255, 107, 0, 0.08));
+      border: 1px solid var(--orange);
+      color: #ff9142;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+      transition: all .2s;
+    }
+    .btn-pick-photo:hover {
+      background: var(--orange);
+      color: #000;
+      box-shadow: 0 0 12px var(--orange-glow);
+    }
+    .btn-remove-photo {
+      background: none;
+      border: none;
+      color: var(--red);
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 2px 0;
+      width: fit-content;
+      text-align: left;
+    }
+    .btn-remove-photo:hover { text-decoration: underline; }
+    .avatar-hint-text {
+      font-size: 10px;
+      color: var(--text-muted);
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
     /* ── CARD UNIFICADO DO ATLETA (TUDO JUNTO NO MESMO BLOCO) ── */
     .athlete-card-unified {
       background: linear-gradient(135deg, rgba(18, 24, 34, 0.95), rgba(12, 16, 23, 0.92));
@@ -1261,6 +1345,90 @@
       font-family: 'Space Grotesk', sans-serif;
     }
 
+    
+    /* ── FOTO DE PERFIL NO MODAL E NO CARD ── */
+    .avatar-edit-box {
+      background: var(--card-inner);
+      border: 1px solid var(--border-lit);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .avatar-preview-ring {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #141b26;
+      border: 2px solid var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 0 14px var(--orange-glow);
+      cursor: pointer;
+      position: relative;
+    }
+    .avatar-preview-ring img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
+    .avatar-edit-info {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+    .btn-pick-photo {
+      background: linear-gradient(135deg, rgba(255, 107, 0, 0.25), rgba(255, 107, 0, 0.08));
+      border: 1px solid var(--orange);
+      color: #ff9142;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+      transition: all .2s;
+    }
+    .btn-pick-photo:hover {
+      background: var(--orange);
+      color: #000;
+      box-shadow: 0 0 12px var(--orange-glow);
+    }
+    .btn-remove-photo {
+      background: none;
+      border: none;
+      color: var(--red);
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 2px 0;
+      width: fit-content;
+      text-align: left;
+    }
+    .btn-remove-photo:hover { text-decoration: underline; }
+    .avatar-hint-text {
+      font-size: 10px;
+      color: var(--text-muted);
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
     /* ── CARD UNIFICADO DO ATLETA (TUDO JUNTO NO MESMO BLOCO) ── */
     .athlete-card-unified {
       background: linear-gradient(135deg, rgba(18, 24, 34, 0.95), rgba(12, 16, 23, 0.92));
@@ -1504,7 +1672,7 @@
   <!-- 1. CARD UNIFICADO DO ATLETA (NOME, IDADE, PESO E IMC TODOS JUNTOS) -->
   <div class="athlete-card-unified" onclick="openProfileModal()">
     <div class="athlete-avatar-col">
-      <div class="athlete-avatar-badge" id="athleteAvatarBadge">👤</div>
+      <div class="athlete-avatar-badge" id="athleteAvatarBadge" title="Foto de Perfil — Toque para editar">👤</div>
     </div>
     <div class="athlete-info-col">
       <div class="athlete-name-row">
@@ -1587,7 +1755,24 @@
   <div class="modal-dialog">
     <div class="modal-head">
       <h2>Perfil do Atleta</h2>
-      <p>Gerencie peso, altura e faça backup das suas cargas.</p>
+      <p>Personalize sua foto, nome, idade e métricas corporais.</p>
+    </div>
+
+    <!-- SEÇÃO DE FOTO DE PERFIL COM DESTAQUE -->
+    <div class="avatar-edit-box">
+      <div class="avatar-preview-ring" id="modalAvatarPreview" onclick="document.getElementById('inputAvatarFile').click()" title="Toque para mudar a foto">
+        👤
+      </div>
+      <div class="avatar-edit-info">
+        <label class="btn-pick-photo" for="inputAvatarFile">
+          📷 Escolher Foto de Perfil
+        </label>
+        <input type="file" id="inputAvatarFile" accept="image/*" style="display:none;" onchange="handleAvatarUpload(event)">
+        <button type="button" class="btn-remove-photo" id="btnRemoveAvatar" onclick="removeAvatarPhoto()" style="display:none;">
+          🗑️ Remover Foto
+        </button>
+        <div class="avatar-hint-text">Toque na foto ou no botão para escolher da galeria</div>
+      </div>
     </div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
