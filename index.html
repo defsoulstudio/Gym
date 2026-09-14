@@ -306,11 +306,10 @@
     }
 
     
-    /* ── CARD UNIFICADO DO ATLETA (TUDO JUNTO NO MESMO BLOCO) ── */
     
-    /* ── AVATAR DO ATLETA ── */
+    /* ── AVATAR ESTILIZADO ── */
     .athlete-avatar-badge {
-      width: 48px; height: 48px;
+      width: 46px; height: 46px;
       background: #141b26;
       border: 2px solid var(--orange);
       border-radius: 50%;
@@ -334,13 +333,13 @@
       border: 1px solid var(--border);
       border-radius: var(--radius-sm);
       padding: 12px 14px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
       gap: 14px;
     }
     .avatar-preview-box {
-      width: 58px; height: 58px;
+      width: 56px; height: 56px;
       border-radius: 50%;
       background: #141b26;
       border: 2px solid var(--orange);
@@ -350,36 +349,36 @@
       font-size: 26px;
       overflow: hidden;
       flex-shrink: 0;
-      box-shadow: 0 0 14px var(--orange-glow);
+      box-shadow: 0 0 12px var(--orange-glow);
     }
     .avatar-preview-box img {
       width: 100%; height: 100%;
       object-fit: cover;
       border-radius: 50%;
+      display: block;
     }
     .avatar-upload-actions {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 4px;
       flex: 1;
     }
     .btn-avatar-pick {
       background: var(--orange-dim);
       border: 1px solid var(--orange);
       color: #ff9142;
-      padding: 7px 12px;
+      padding: 6px 12px;
       border-radius: var(--radius-sm);
       font-family: 'Outfit', sans-serif;
       font-size: 11px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 6px;
       width: fit-content;
-      transition: all .2s;
+      transition: all .18s;
     }
     .btn-avatar-pick:hover {
       background: var(--orange);
@@ -396,13 +395,13 @@
       padding: 2px 0;
       width: fit-content;
     }
-    .btn-avatar-remove:hover { text-decoration: underline; }
     .avatar-tip {
       font-size: 9px;
       color: var(--text-muted);
       font-family: 'Space Grotesk', sans-serif;
     }
 
+    /* ── CARD UNIFICADO DO ATLETA (TUDO JUNTO NO MESMO BLOCO) ── */
     .athlete-card-unified {
       background: linear-gradient(135deg, rgba(18, 24, 34, 0.95), rgba(12, 16, 23, 0.92));
       border: 1px solid var(--border-lit);
@@ -1167,11 +1166,10 @@
     }
 
     
-    /* ── CARD UNIFICADO DO ATLETA (TUDO JUNTO NO MESMO BLOCO) ── */
     
-    /* ── AVATAR DO ATLETA ── */
+    /* ── AVATAR ESTILIZADO ── */
     .athlete-avatar-badge {
-      width: 48px; height: 48px;
+      width: 46px; height: 46px;
       background: #141b26;
       border: 2px solid var(--orange);
       border-radius: 50%;
@@ -1195,13 +1193,13 @@
       border: 1px solid var(--border);
       border-radius: var(--radius-sm);
       padding: 12px 14px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
       gap: 14px;
     }
     .avatar-preview-box {
-      width: 58px; height: 58px;
+      width: 56px; height: 56px;
       border-radius: 50%;
       background: #141b26;
       border: 2px solid var(--orange);
@@ -1211,36 +1209,36 @@
       font-size: 26px;
       overflow: hidden;
       flex-shrink: 0;
-      box-shadow: 0 0 14px var(--orange-glow);
+      box-shadow: 0 0 12px var(--orange-glow);
     }
     .avatar-preview-box img {
       width: 100%; height: 100%;
       object-fit: cover;
       border-radius: 50%;
+      display: block;
     }
     .avatar-upload-actions {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 4px;
       flex: 1;
     }
     .btn-avatar-pick {
       background: var(--orange-dim);
       border: 1px solid var(--orange);
       color: #ff9142;
-      padding: 7px 12px;
+      padding: 6px 12px;
       border-radius: var(--radius-sm);
       font-family: 'Outfit', sans-serif;
       font-size: 11px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 6px;
       width: fit-content;
-      transition: all .2s;
+      transition: all .18s;
     }
     .btn-avatar-pick:hover {
       background: var(--orange);
@@ -1257,13 +1255,13 @@
       padding: 2px 0;
       width: fit-content;
     }
-    .btn-avatar-remove:hover { text-decoration: underline; }
     .avatar-tip {
       font-size: 9px;
       color: var(--text-muted);
       font-family: 'Space Grotesk', sans-serif;
     }
 
+    /* ── CARD UNIFICADO DO ATLETA (TUDO JUNTO NO MESMO BLOCO) ── */
     .athlete-card-unified {
       background: linear-gradient(135deg, rgba(18, 24, 34, 0.95), rgba(12, 16, 23, 0.92));
       border: 1px solid var(--border-lit);
@@ -1589,20 +1587,7 @@
   <div class="modal-dialog">
     <div class="modal-head">
       <h2>Perfil do Atleta</h2>
-      <p>Personalize sua foto, nome, idade e métricas corporais.</p>
-    </div>
-
-    <!-- FOTO DE PERFIL DO ATLETA -->
-    <div class="avatar-upload-card">
-      <div class="avatar-preview-box" id="modalAvatarPreview">👤</div>
-      <div class="avatar-upload-actions">
-        <label class="btn-avatar-pick">
-          📷 Escolher Foto
-          <input type="file" id="inputAvatarFile" accept="image/*" style="display:none" onchange="handleAvatarUpload(event)">
-        </label>
-        <button class="btn-avatar-remove" id="btnRemoveAvatar" onclick="removeAvatarPhoto()" style="display:none;">Remover Foto</button>
-        <div class="avatar-tip">JPG ou PNG (fica salva no seu aparelho)</div>
-      </div>
+      <p>Gerencie peso, altura e faça backup das suas cargas.</p>
     </div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
@@ -1809,46 +1794,757 @@ function loadHistory(){
 }
 function saveHistory(h){ localStorage.setItem(K_HISTORY, JSON.stringify(h)); }
 
-
-// ── VARIÁVEL GLOBAL PARA FOTO TEMPORÁRIA ──
-let activeAvatarData = '';
-
 function loadProfile(){
   try {
     const raw = localStorage.getItem(K_PROFILE);
-    if(raw){
-      const p = JSON.parse(raw);
-      return {
-        nome: p.nome || '',
-        idade: p.idade || '',
-        peso: p.peso || '',
-        altura: p.altura || '',
-        avatar: p.avatar || ''
-      };
-    }
-    return { nome: '', idade: '', peso: '', altura: '', avatar: '' };
-  } catch(e) {
-    return { nome: '', idade: '', peso: '', altura: '', avatar: '' };
-  }
+    return raw ? JSON.parse(raw) : { nome: '', idade: '', peso: '', altura: '' };
+  } catch(e) { return { nome: '', idade: '', peso: '', altura: '' }; }
+}
+function saveProfile(p){ localStorage.setItem(K_PROFILE, JSON.stringify(p)); }
+
+function getTodayIso(){ return new Date().toISOString().split('T')[0]; }
+
+let activeDayTab = 'Segunda';
+
+function showGymToast(msg){
+  const t = document.getElementById('gymToastPopup');
+  t.textContent = msg;
+  t.classList.add('active');
+  setTimeout(() => t.classList.remove('active'), 2200);
 }
 
-function saveProfile(p){
+
+function playVictorySound(){
   try {
-    localStorage.setItem(K_PROFILE, JSON.stringify(p));
-  } catch(err) {
-    console.error('Erro no localStorage:', err);
-    // Se estourar a cota por imagem muito pesada, reduz resolução
-    if(p.avatar && p.avatar.length > 30000){
-      try {
-        p.avatar = ''; // reseta avatar para salvar os dados vitais
-        localStorage.setItem(K_PROFILE, JSON.stringify(p));
-        alert('A foto escolhida é pesada demais para a memória do navegador. Escolha uma foto menor.');
-      } catch(e2){}
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const notes = [523.25, 659.25, 783.99, 1046.50]; // Acorde Maior Triunfal C - E - G - C
+    notes.forEach((freq, i) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(freq, ctx.currentTime + i * 0.12);
+      gain.gain.setValueAtTime(0.3, ctx.currentTime + i * 0.12);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + i * 0.12 + 0.5);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(ctx.currentTime + i * 0.12);
+      osc.stop(ctx.currentTime + i * 0.12 + 0.5);
+    });
+    if(navigator.vibrate) navigator.vibrate([150, 70, 150, 70, 300]);
+  } catch(e) {}
+}
+
+function playTimerBeep(){
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    // Bip duplo esportivo (880Hz e 1174Hz)
+    [880, 1174.66].forEach((freq, idx) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      const startTime = ctx.currentTime + idx * 0.18;
+      osc.frequency.setValueAtTime(freq, startTime);
+      gain.gain.setValueAtTime(0.45, startTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, startTime + 0.25);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(startTime);
+      osc.stop(startTime + 0.25);
+    });
+    if(navigator.vibrate) navigator.vibrate([200, 80, 200, 80, 350]);
+  } catch(e) {}
+}
+
+let timerInterval = null;
+let timerSeconds = 0;
+
+function startRestCountdown(sec = 60, exName = ''){
+  clearInterval(timerInterval);
+  timerSeconds = sec;
+  const dock = document.getElementById('restTimerDock');
+  const ring = document.getElementById('dockTimerRing');
+  const txt = document.getElementById('dockTargetText');
+  ring.classList.remove('finished');
+  ring.textContent = timerSeconds;
+  txt.textContent = exName ? exName : 'Respire fundo';
+  dock.style.display = 'block';
+
+  document.querySelectorAll('.dock-presets-row .dock-preset-btn').forEach(b => {
+    b.classList.toggle('active', b.textContent === `${sec}s`);
+  });
+
+  timerInterval = setInterval(() => {
+    timerSeconds--;
+    if(timerSeconds <= 0){
+      clearInterval(timerInterval);
+      ring.textContent = '0';
+      ring.classList.add('finished');
+      txt.textContent = 'Próxima série! BORA! 🔥';
+      playTimerBeep();
+      showGymToast('Descanso finalizado! 💪');
+    } else {
+      ring.textContent = timerSeconds;
+    }
+  }, 1000);
+}
+
+function adjustRestSeconds(delta){
+  timerSeconds = Math.max(5, timerSeconds + delta);
+  document.getElementById('dockTimerRing').textContent = timerSeconds;
+}
+
+function hideRestTimer(){
+  clearInterval(timerInterval);
+  document.getElementById('restTimerDock').style.display = 'none';
+}
+
+function isProgressionExercise(item){
+  if(!item || !item.obs) return false;
+  const obsLower = item.obs.toLowerCase();
+  return obsLower.includes('progress') || obsLower.includes('aumenta') || obsLower.includes('carga');
+}
+
+function getProgressionTimeline(exerciseName){
+  const history = loadHistory();
+  const dates = Object.keys(history).sort();
+  const timeline = [];
+  let allTimeMax = 0;
+  let previousSessionSets = null;
+  const today = getTodayIso();
+
+  dates.forEach(d => {
+    for(const dayKey in history[d]){
+      if(history[d][dayKey][exerciseName]){
+        const sets = history[d][dayKey][exerciseName];
+        let maxW = 0;
+        sets.forEach(s => {
+          const w = parseFloat(s.weight) || 0;
+          if(w > maxW) maxW = w;
+        });
+        if(maxW > allTimeMax) allTimeMax = maxW;
+        if(maxW > 0){
+          timeline.push({ date: d, maxWeight: maxW, sets });
+        }
+        if(d !== today && sets.length > 0){
+          previousSessionSets = sets;
+        }
+      }
+    }
+  });
+  return { timeline, allTimeMax, previousSessionSets };
+}
+
+function parseSetsNumber(seriesStr){
+  if(!seriesStr) return 3;
+  const m = seriesStr.match(/(\d+)\s*[xX]/);
+  return m ? parseInt(m[1], 10) : 3;
+}
+function parseRepsNumber(seriesStr){
+  if(!seriesStr) return 10;
+  const m = seriesStr.match(/[xX]\s*(\d+)/);
+  return m ? parseInt(m[1], 10) : 10;
+}
+
+// ── RENDER SESSÃO DE TREINO ──
+function renderWorkoutView(day){
+  const workouts = loadWorkouts();
+  const items = workouts[day] || [];
+  const mount = document.getElementById('workoutViewMount');
+  mount.innerHTML = '';
+
+  const history = loadHistory();
+  const today = getTodayIso();
+  history[today] = history[today] || {};
+  history[today][day] = history[today][day] || {};
+
+  // HERO DA SESSÃO DE HOJE (FOCO 100% NO TREINO)
+  const hero = document.createElement('div');
+  hero.className = 'session-hero';
+  hero.innerHTML = `
+    <div class="hero-top-row">
+      <div>
+        <div class="session-badge-day">TREINO DO DIA</div>
+        <h1 class="session-title">${day}</h1>
+      </div>
+      <div class="session-live-stats">
+        <div class="live-stat-item">
+          <span class="live-stat-lbl">Volume</span>
+          <span class="live-stat-val" id="sessionVolumeVal" style="color:var(--orange)">0 kg</span>
+        </div>
+        <div class="live-stat-item">
+          <span class="live-stat-lbl">Séries</span>
+          <span class="live-stat-val" id="sessionSetsVal" style="color:var(--green)">0feitas</span>
+        </div>
+        <div class="hero-progress-pill">
+          <div class="prog-track-bar">
+            <div class="prog-fill-bar" id="sessionProgFill"></div>
+          </div>
+          <span class="prog-text" id="sessionProgText">0%</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-buttons-row">
+      <button class="btn-session finish" onclick="finishEntireWorkout()">Concluir Treino ✓</button>
+      <button class="btn-session reset" onclick="resetDaySession()">Resetar Dia</button>
+    </div>
+  `;
+  mount.appendChild(hero);
+
+  if(items.length === 0){
+    mount.innerHTML += `<div style="text-align:center;padding:40px 0;color:var(--text-muted)">Nenhum exercício cadastrado para ${day}.</div>`;
+    return;
+  }
+
+  const list = document.createElement('div');
+  list.className = 'exercise-list-container';
+
+  let totalTargetSets = 0;
+  let totalDoneSets = 0;
+  let sessionVolume = 0;
+
+  items.forEach((item, exIdx) => {
+    const hasProgression = isProgressionExercise(item);
+    const targetSets = parseSetsNumber(item.series);
+    const targetReps = parseRepsNumber(item.series);
+    const recordedSets = history[today][day][item.exercicio] || [];
+    const { timeline, allTimeMax, previousSessionSets } = getProgressionTimeline(item.exercicio);
+
+    totalTargetSets += targetSets;
+
+    const card = document.createElement('div');
+    card.className = 'ex-card';
+    card.id = `card-ex-${exIdx}`;
+
+    // Tag Limpa (SEM NENHUMA BARRINHA EMBAIXO)
+    let badgeHtml = '';
+    if(item.obs){
+      const obsLower = item.obs.toLowerCase();
+      if(obsLower.includes('progress') || obsLower.includes('carga') || obsLower.includes('aumenta')){
+        badgeHtml = `<span class="badge-pill progression">🔥 PROGRESSÃO DE CARGA</span>`;
+      } else if(obsLower.includes('aquecimento')){
+        badgeHtml = `<span class="badge-pill warmup">AQUECIMENTO</span>`;
+      } else if(obsLower.includes('isometria')){
+        badgeHtml = `<span class="badge-pill isometric">ISOMETRIA</span>`;
+      } else {
+        badgeHtml = `<span class="badge-pill isometric">${item.obs}</span>`;
+      }
+    }
+
+    let cardHtml = `
+      <div class="ex-card-header">
+        <div class="ex-title-group">
+          <span class="ex-number-badge">${String(exIdx + 1).padStart(2, '0')}</span>
+          <div class="ex-name-meta">
+            <h3>${item.exercicio}</h3>
+            <div class="ex-target-text">Meta: ${item.series || '—'}</div>
+          </div>
+        </div>
+        ${badgeHtml}
+      </div>
+    `;
+
+    // EXERCÍCIO COM PROGRESSÃO DE CARGA: TABELA EM CSS-GRID MOBILE
+    if(hasProgression){
+      if(timeline.length > 0){
+        const recent = timeline.slice(-4);
+        const steps = recent.map((t, i) => {
+          const isCurr = i === recent.length - 1;
+          const dFmt = new Date(t.date + 'T12:00:00').toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' });
+          return `<span class="bc-step ${isCurr ? 'current' : ''}">${t.maxWeight}kg <small style="color:var(--text-muted);font-size:9px">(${dFmt})</small></span>`;
+        }).join(' <span style="color:var(--text-muted);font-size:9px">➜</span> ');
+        cardHtml += `
+          <div class="progression-breadcrumbs">
+            <span class="breadcrumbs-label">📈 Evolução:</span>
+            ${steps}
+          </div>
+        `;
+      }
+
+      cardHtml += `
+        <div class="mobile-sets-container">
+          <div class="mobile-sets-head">
+            <div>Série/Ant.</div>
+            <div>Carga (kg)</div>
+            <div>Reps</div>
+            <div>Feito</div>
+          </div>
+          <div id="sets-rows-${exIdx}"></div>
+        </div>
+        <div class="card-footer-controls">
+          <button class="btn-action-small" onclick="addSetRow('${day}', '${item.exercicio}')">+ Série</button>
+          <button class="btn-action-small" onclick="startRestCountdown(60, '${item.exercicio}')">⏱ 60s</button>
+        </div>
+      `;
+
+      card.innerHTML = cardHtml;
+      const rowsMount = card.querySelector(`#sets-rows-${exIdx}`);
+      const setsToRender = Math.max(targetSets, recordedSets.length);
+      let isCardDone = setsToRender > 0;
+
+      for(let sIdx = 0; sIdx < setsToRender; sIdx++){
+        const prevSet = (previousSessionSets && previousSessionSets[sIdx]) ? previousSessionSets[sIdx] : null;
+        const setInfo = recordedSets[sIdx] || {
+          weight: prevSet ? prevSet.weight : '',
+          reps: prevSet ? prevSet.reps : targetReps,
+          done: false
+        };
+
+        const w = parseFloat(setInfo.weight) || 0;
+        const prevW = prevSet ? (parseFloat(prevSet.weight) || 0) : 0;
+
+        let deltaHtml = '';
+        if(w > 0 && prevW > 0 && w > prevW){
+          deltaHtml = `<span class="delta-badge up">+${w - prevW}k</span>`;
+        }
+        if(w > 0 && w >= allTimeMax && allTimeMax > 0){
+          deltaHtml += `<span class="delta-badge pr">PR</span>`;
+        }
+
+        if(setInfo.done){
+          totalDoneSets++;
+          sessionVolume += w * (parseInt(setInfo.reps) || 0);
+        } else {
+          isCardDone = false;
+        }
+
+        const row = document.createElement('div');
+        row.className = `mobile-set-row ${setInfo.done ? 'is-done' : ''}`;
+        row.innerHTML = `
+          <div class="set-meta-box">
+            <span class="set-num-pill">S${sIdx + 1}</span>
+            <span class="set-ant-hint">${prevSet ? `Ant: <span>${prevSet.weight}k</span>` : '1º'}</span>
+          </div>
+          <div class="weight-stepper-box">
+            <button class="stepper-btn" onclick="stepWeightVal('${day}', '${item.exercicio}', ${sIdx}, -1)">-</button>
+            <input type="number" class="stepper-input" value="${setInfo.weight || ''}" placeholder="${prevSet ? prevSet.weight : '0'}" step="0.5" inputmode="decimal" onchange="updateSetInfo('${day}', '${item.exercicio}', ${sIdx}, 'weight', this.value)">
+            <button class="stepper-btn" onclick="stepWeightVal('${day}', '${item.exercicio}', ${sIdx}, +1)">+</button>
+            ${deltaHtml}
+          </div>
+          <div>
+            <input type="number" class="reps-input" value="${setInfo.reps || ''}" placeholder="${targetReps}" step="1" inputmode="numeric" onchange="updateSetInfo('${day}', '${item.exercicio}', ${sIdx}, 'reps', this.value)">
+          </div>
+          <div>
+            <button class="check-set-btn ${setInfo.done ? 'checked' : ''}" onclick="toggleSetStatus('${day}', '${item.exercicio}', ${sIdx}, this, '${item.exercicio}')">✓</button>
+          </div>
+        `;
+        rowsMount.appendChild(row);
+      }
+
+      if(isCardDone && setsToRender > 0) card.classList.add('completed-card');
+
+    } else {
+      // EXERCÍCIO NORMAL: CHIPS EM GRADE RESPONSIVA
+      cardHtml += `
+        <div class="normal-exercise-grid" id="normal-grid-${exIdx}"></div>
+        <div class="card-footer-controls">
+          <button class="btn-action-small" onclick="addNormalSet('${day}', '${item.exercicio}')">+ Série</button>
+          <button class="btn-action-small" onclick="startRestCountdown(45, '${item.exercicio}')">⏱ 45s</button>
+        </div>
+      `;
+      card.innerHTML = cardHtml;
+      const grid = card.querySelector(`#normal-grid-${exIdx}`);
+      const setsToRender = Math.max(targetSets, recordedSets.length);
+      let isCardDone = setsToRender > 0;
+
+      for(let sIdx = 0; sIdx < setsToRender; sIdx++){
+        const setInfo = recordedSets[sIdx] || { reps: targetReps, done: false };
+        if(setInfo.done){
+          totalDoneSets++;
+        } else {
+          isCardDone = false;
+        }
+
+        const btn = document.createElement('button');
+        btn.className = `chip-set-btn ${setInfo.done ? 'is-checked' : ''}`;
+        btn.innerHTML = `<span>Série ${sIdx + 1}</span> <span>${setInfo.done ? '✓' : '○'}</span>`;
+        btn.onclick = () => {
+          toggleNormalSetStatus(day, item.exercicio, sIdx, item.exercicio);
+        };
+        grid.appendChild(btn);
+      }
+
+      if(isCardDone && setsToRender > 0) card.classList.add('completed-card');
+    }
+
+    list.appendChild(card);
+  });
+
+  mount.appendChild(list);
+  updateAthleteBanner();
+
+  // Progresso do dia
+  const pct = totalTargetSets > 0 ? Math.round((totalDoneSets / totalTargetSets) * 100) : 0;
+  const bar = document.getElementById('sessionProgFill');
+  const txt = document.getElementById('sessionProgText');
+  if(bar) bar.style.width = `${pct}%`;
+  if(txt) txt.textContent = `${pct}%`;
+
+  updateMetricsSummary(sessionVolume, totalDoneSets);
+}
+
+// ── MANIPULAÇÃO DE ESTADO ──
+function toggleNormalSetStatus(day, exName, sIdx, title){
+  const history = loadHistory();
+  const today = getTodayIso();
+  history[today] = history[today] || {};
+  history[today][day] = history[today][day] || {};
+  history[today][day][exName] = history[today][day][exName] || [];
+
+  while(history[today][day][exName].length <= sIdx){
+    history[today][day][exName].push({ done: false });
+  }
+
+  const isDone = !history[today][day][exName][sIdx].done;
+  history[today][day][exName][sIdx].done = isDone;
+  saveHistory(history);
+
+  if(isDone){
+    showGymToast('Série concluída! 💪');
+    startRestCountdown(45, title);
+  }
+
+  renderWorkoutView(day);
+  renderTabsTrack();
+}
+
+function addNormalSet(day, exName){
+  const history = loadHistory();
+  const today = getTodayIso();
+  history[today] = history[today] || {};
+  history[today][day] = history[today][day] || {};
+  history[today][day][exName] = history[today][day][exName] || [];
+  history[today][day][exName].push({ done: false });
+  saveHistory(history);
+  renderWorkoutView(day);
+}
+
+function stepWeightVal(day, exName, sIdx, delta){
+  const history = loadHistory();
+  const today = getTodayIso();
+  history[today] = history[today] || {};
+  history[today][day] = history[today][day] || {};
+  history[today][day][exName] = history[today][day][exName] || [];
+
+  while(history[today][day][exName].length <= sIdx){
+    history[today][day][exName].push({ weight: '', reps: 10, done: false });
+  }
+
+  const curr = parseFloat(history[today][day][exName][sIdx].weight) || 0;
+  history[today][day][exName][sIdx].weight = Math.max(0, curr + delta);
+  saveHistory(history);
+  renderWorkoutView(day);
+}
+
+function updateSetInfo(day, exName, sIdx, field, val){
+  const history = loadHistory();
+  const today = getTodayIso();
+  history[today] = history[today] || {};
+  history[today][day] = history[today][day] || {};
+  history[today][day][exName] = history[today][day][exName] || [];
+
+  while(history[today][day][exName].length <= sIdx){
+    history[today][day][exName].push({ weight: '', reps: 10, done: false });
+  }
+
+  history[today][day][exName][sIdx][field] = val;
+  saveHistory(history);
+  recalcMetrics();
+}
+
+function toggleSetStatus(day, exName, sIdx, btn, title){
+  const history = loadHistory();
+  const today = getTodayIso();
+  history[today] = history[today] || {};
+  history[today][day] = history[today][day] || {};
+  history[today][day][exName] = history[today][day][exName] || [];
+
+  while(history[today][day][exName].length <= sIdx){
+    history[today][day][exName].push({ weight: '', reps: 10, done: false });
+  }
+
+  const isDone = !history[today][day][exName][sIdx].done;
+  history[today][day][exName][sIdx].done = isDone;
+
+  const parent = btn.closest('.mobile-set-row');
+  const wInput = parent.querySelector('.stepper-input');
+  const rInput = parent.querySelector('.reps-input');
+  if(!history[today][day][exName][sIdx].weight && wInput && wInput.value){
+    history[today][day][exName][sIdx].weight = wInput.value;
+  }
+  if(!history[today][day][exName][sIdx].reps && rInput && rInput.value){
+    history[today][day][exName][sIdx].reps = rInput.value;
+  }
+
+  saveHistory(history);
+  btn.classList.toggle('checked', isDone);
+
+  if(isDone){
+    showGymToast('Série concluída! 🔥');
+    startRestCountdown(60, title);
+  }
+
+  renderWorkoutView(day);
+  renderTabsTrack();
+}
+
+function addSetRow(day, exName){
+  const history = loadHistory();
+  const today = getTodayIso();
+  history[today] = history[today] || {};
+  history[today][day] = history[today][day] || {};
+  history[today][day][exName] = history[today][day][exName] || [];
+
+  const last = history[today][day][exName].slice(-1)[0] || { weight: '', reps: 10 };
+  history[today][day][exName].push({ weight: last.weight, reps: last.reps, done: false });
+  saveHistory(history);
+  renderWorkoutView(day);
+}
+
+
+// ── SISTEMA DE CONFETES NATIVO (100% OFFLINE) ──
+function launchWorkoutConfetti(){
+  const canvas = document.getElementById('confettiCanvas');
+  if(!canvas) return;
+  canvas.style.display = 'block';
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const particles = [];
+  const colors = ['#00e676', '#ff6b00', '#f59e0b', '#00b4d8', '#ffffff'];
+  const count = 90;
+
+  for(let i = 0; i < count; i++){
+    particles.push({
+      x: canvas.width / 2 + (Math.random() - 0.5) * 120,
+      y: canvas.height / 2,
+      vx: (Math.random() - 0.5) * 16,
+      vy: -Math.random() * 14 - 6,
+      size: Math.random() * 8 + 4,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      rotation: Math.random() * 360,
+      rotSpeed: (Math.random() - 0.5) * 10,
+      alpha: 1
+    });
+  }
+
+  let startTime = Date.now();
+  function draw(){
+    const elapsed = Date.now() - startTime;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    let alive = false;
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.45; // gravity
+      p.rotation += p.rotSpeed;
+      if(elapsed > 1800) p.alpha -= 0.025;
+
+      if(p.alpha > 0){
+        alive = true;
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, p.alpha);
+        ctx.translate(p.x, p.y);
+        ctx.rotate((p.rotation * Math.PI) / 180);
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+        ctx.restore();
+      }
+    });
+
+    if(alive && elapsed < 4000){
+      requestAnimationFrame(draw);
+    } else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      canvas.style.display = 'none';
+    }
+  }
+  requestAnimationFrame(draw);
+}
+
+function finishEntireWorkout(){
+  const workouts = loadWorkouts();
+  const items = workouts[activeDayTab] || [];
+  const history = loadHistory();
+  const today = getTodayIso();
+  history[today] = history[today] || {};
+  history[today][activeDayTab] = history[today][activeDayTab] || {};
+
+  items.forEach(it => {
+    const numSets = parseSetsNumber(it.series);
+    const numReps = parseRepsNumber(it.series);
+    history[today][activeDayTab][it.exercicio] = history[today][activeDayTab][it.exercicio] || [];
+    for(let s = 0; s < numSets; s++){
+      if(!history[today][activeDayTab][it.exercicio][s]){
+        history[today][activeDayTab][it.exercicio].push({ weight: '', reps: numReps, done: true });
+      } else {
+        history[today][activeDayTab][it.exercicio][s].done = true;
+      }
+    }
+  });
+
+  saveHistory(history);
+
+  // Calcula estatísticas para o modal de vitória
+  let vol = 0, doneSets = 0;
+  if(history[today] && history[today][activeDayTab]){
+    Object.values(history[today][activeDayTab]).forEach(arr => {
+      arr.forEach(s => {
+        if(s.done){
+          doneSets++;
+          vol += (parseFloat(s.weight) || 0) * (parseInt(s.reps) || 0);
+        }
+      });
+    });
+  }
+
+  // Preenche dados da vitória
+  const p = loadProfile();
+  const vAthlete = document.getElementById('victoryAthleteName');
+  if(vAthlete){
+    vAthlete.textContent = p.nome ? `Excelente trabalho, ${p.nome}! 🔥` : 'Excelente trabalho, atleta! 🔥';
+  }
+  const vVol = document.getElementById('victoryVolume');
+  if(vVol) vVol.textContent = `${Math.round(vol)} kg`;
+  const vSets = document.getElementById('victorySets');
+  if(vSets) vSets.textContent = `${doneSets} séries`;
+
+  launchWorkoutConfetti();
+  playVictorySound();
+  openModal('modalVictory');
+
+  renderWorkoutView(activeDayTab);
+  renderTabsTrack();
+}
+
+function resetDaySession(){
+  if(!confirm(`Resetar todo o progresso de ${activeDayTab} hoje?`)) return;
+  const history = loadHistory();
+  const today = getTodayIso();
+  if(history[today] && history[today][activeDayTab]){
+    delete history[today][activeDayTab];
+    saveHistory(history);
+  }
+  showGymToast('Sessão resetada.');
+  renderWorkoutView(activeDayTab);
+  renderTabsTrack();
+}
+
+function recalcMetrics(){
+  const history = loadHistory();
+  const today = getTodayIso();
+  let vol = 0;
+  let sets = 0;
+
+  if(history[today] && history[today][activeDayTab]){
+    Object.values(history[today][activeDayTab]).forEach(arr => {
+      arr.forEach(s => {
+        if(s.done){
+          sets++;
+          vol += (parseFloat(s.weight) || 0) * (parseInt(s.reps) || 0);
+        }
+      });
+    });
+  }
+  updateMetricsSummary(vol, sets);
+}
+
+
+function updateAthleteBanner(){
+  const p = loadProfile();
+  const heroTag = document.getElementById('heroAthleteTag');
+  if(heroTag){
+    if(p.nome){
+      heroTag.innerHTML = `🔥 ATLETA: <span style="color:var(--text-white);font-weight:800">${p.nome.toUpperCase()}</span>${p.idade ? ' <span style="color:var(--orange)">(' + p.idade + ' ANOS)</span>' : ''}`;
+    } else {
+      heroTag.textContent = 'SESSÃO DE TREINO';
     }
   }
 }
 
-// ── UPLOAD E OTIMIZAÇÃO DA FOTO (LEVE E RÁPIDA, ~8KB) ──
+function updateMetricsSummary(vol = 0, sets = 0){
+  const p = loadProfile();
+
+  // 1. Atualiza dados do Card Unificado do Atleta (TUDO JUNTO)
+  const nameEl = document.getElementById('athleteCardName');
+  const ageEl = document.getElementById('athleteCardAge');
+  const pesoEl = document.getElementById('athleteCardPeso');
+  const imcEl = document.getElementById('athleteCardImc');
+  const imcLabel = document.getElementById('athleteCardImcLabel');
+
+  if(nameEl) nameEl.textContent = p.nome ? p.nome.toUpperCase() : 'ATLETA';
+  updateAvatarDisplays(p.avatar || '');
+  if(ageEl) {
+    if(p.idade){
+      ageEl.textContent = `${p.idade} ANOS`;
+      ageEl.style.display = 'inline-block';
+    } else {
+      ageEl.style.display = 'none';
+    }
+  }
+
+  if(pesoEl) pesoEl.textContent = p.peso ? `${p.peso} kg` : '—';
+
+  if(p.peso && p.altura){
+    const h = p.altura / 100;
+    const bmi = (p.peso / (h * h)).toFixed(1);
+    if(imcEl) imcEl.textContent = bmi;
+    if(imcLabel){
+      if(bmi < 18.5){ imcLabel.textContent = 'Abaixo'; imcLabel.style.color = 'var(--blue-lit)'; }
+      else if(bmi < 25){ imcLabel.textContent = 'Normal ✓'; imcLabel.style.color = 'var(--green)'; }
+      else if(bmi < 30){ imcLabel.textContent = 'Sobrepeso'; imcLabel.style.color = 'var(--gold)'; }
+      else { imcLabel.textContent = 'Obesidade'; imcLabel.style.color = 'var(--red)'; }
+    }
+  } else {
+    if(imcEl) imcEl.textContent = '—';
+    if(imcLabel) imcLabel.textContent = '';
+  }
+
+  // 2. Atualiza dados do Treino da Sessão (Volume e Séries de Hoje)
+  const sessionVol = document.getElementById('sessionVolumeVal');
+  const sessionSets = document.getElementById('sessionSetsVal');
+  if(sessionVol) sessionVol.textContent = `${Math.round(vol)} kg`;
+  if(sessionSets) sessionSets.textContent = `${sets} feitas`;
+}
+
+function renderTabsTrack(){
+  const workouts = loadWorkouts();
+  const track = document.getElementById('tabsScrollTrack');
+  track.innerHTML = '';
+  const days = Object.keys(workouts);
+  const history = loadHistory();
+  const today = getTodayIso();
+
+  days.forEach(day => {
+    const btn = document.createElement('button');
+    btn.className = `day-tab ${day === activeDayTab ? 'active' : ''}`;
+    btn.textContent = day;
+
+    const dayData = history[today] && history[today][day];
+    let isAllDone = false;
+    if(dayData && workouts[day].length > 0){
+      const completedExercises = Object.keys(dayData).length;
+      if(completedExercises >= workouts[day].length) isAllDone = true;
+    }
+    if(isAllDone) btn.classList.add('done-tab');
+
+    btn.onclick = () => {
+      activeDayTab = day;
+      renderTabsTrack();
+      renderWorkoutView(day);
+    };
+    track.appendChild(btn);
+  });
+}
+
+function openModal(id){ document.getElementById(id).classList.add('open'); }
+function closeModal(id){ document.getElementById(id).classList.remove('open'); }
+function handleModalClick(e, id){ if(e.target === document.getElementById(id)) closeModal(id); }
+
+
+let activeAvatarData = '';
+
 function handleAvatarUpload(event){
   const file = event.target.files[0];
   if(!file) return;
@@ -1857,7 +2553,6 @@ function handleAvatarUpload(event){
   reader.onload = function(e){
     const img = new Image();
     img.onload = function(){
-      // Redimensiona para 140x140 com compressão JPEG leve (~8KB a 12KB)
       const canvas = document.createElement('canvas');
       const size = 140;
       canvas.width = size;
@@ -1871,7 +2566,6 @@ function handleAvatarUpload(event){
       ctx.drawImage(img, sx, sy, minDim, minDim, 0, 0, size, size);
       const optimizedBase64 = canvas.toDataURL('image/jpeg', 0.80);
 
-      // Atualiza variável ativa e previews
       activeAvatarData = optimizedBase64;
       updateAvatarDisplays(optimizedBase64);
       showGymToast('Foto carregada! Clique em SALVAR 💾');
@@ -1905,66 +2599,26 @@ function updateAvatarDisplays(avatarUrl){
 
 function openProfileModal(){
   const p = loadProfile();
-  activeAvatarData = p.avatar || '';
-
-  const nameInput = document.getElementById('inputProfileName');
-  const ageInput = document.getElementById('inputProfileAge');
-  const weightInput = document.getElementById('inputProfileWeight');
-  const heightInput = document.getElementById('inputProfileHeight');
-
-  if(nameInput) nameInput.value = p.nome || '';
-  if(ageInput) ageInput.value = p.idade || '';
-  if(weightInput) weightInput.value = p.peso || '';
-  if(heightInput) heightInput.value = p.altura || '';
-
-  updateAvatarDisplays(activeAvatarData);
+  document.getElementById('inputProfileName').value = p.nome || '';
+  document.getElementById('inputProfileAge').value = p.idade || '';
+  document.getElementById('inputProfileWeight').value = p.peso || '';
+  document.getElementById('inputProfileHeight').value = p.altura || '';
   openModal('modalProfile');
 }
 
-// ── SALVAMENTO 100% GARANTIDO (PRESERVA FOTO, SUPORTA VÍRGULA/PONTO) ──
 function saveProfileData(){
-  try {
-    const existing = loadProfile();
-
-    const nameInput = document.getElementById('inputProfileName');
-    const ageInput = document.getElementById('inputProfileAge');
-    const weightInput = document.getElementById('inputProfileWeight');
-    const heightInput = document.getElementById('inputProfileHeight');
-
-    const nomeVal = nameInput ? nameInput.value.trim() : existing.nome;
-    const idadeVal = ageInput && ageInput.value ? (parseInt(ageInput.value, 10) || '') : '';
-
-    // Suporta vírgula ou ponto para decimais (ex: 64,5 ou 64.5)
-    let pesoVal = '';
-    if(weightInput && weightInput.value){
-      const parsedPeso = parseFloat(weightInput.value.replace(',', '.'));
-      if(!isNaN(parsedPeso)) pesoVal = parsedPeso;
-    }
-
-    let alturaVal = '';
-    if(heightInput && heightInput.value){
-      const parsedAltura = parseFloat(heightInput.value.replace(',', '.'));
-      if(!isNaN(parsedAltura)) alturaVal = parsedAltura;
-    }
-
-    const updatedProfile = {
-      nome: nomeVal,
-      idade: idadeVal,
-      peso: pesoVal,
-      altura: alturaVal,
-      avatar: activeAvatarData !== undefined ? activeAvatarData : (existing.avatar || '')
-    };
-
-    saveProfile(updatedProfile);
-    recalcMetrics();
-    closeModal('modalProfile');
-    showGymToast('Perfil salvo com sucesso! 💪');
-  } catch(err) {
-    console.error('Erro ao salvar:', err);
-    alert('Erro ao salvar dados: ' + err.message);
-  }
+  const p = {
+    nome: document.getElementById('inputProfileName').value.trim(),
+    idade: parseInt(document.getElementById('inputProfileAge').value, 10) || '',
+    peso: parseFloat(document.getElementById('inputProfileWeight').value) || '',
+    altura: parseFloat(document.getElementById('inputProfileHeight').value) || ''
+  };
+  saveProfile(p);
+  recalcMetrics();
+  updateAthleteBanner();
+  closeModal('modalProfile');
+  showGymToast('Perfil salvo com sucesso! 💪');
 }
-
 
 function wipeAllData(){
   if(!confirm('Deseja apagar todo o histórico de treinos e perfil?')) return;
