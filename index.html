@@ -7,6 +7,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="#07090e">
   <title>DEFSOUL // GYM SYSTEM</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <meta name="apple-mobile-web-app-title" content="DEFSOUL">
+  <meta name="application-name" content="DEFSOUL">
 
   <!-- Google Fonts: Bebas Neue, Outfit, Space Grotesk -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -3086,6 +3090,16 @@ function resetWorkoutsToDefault(){
   renderTabsTrack();
   renderWorkoutView(activeDayTab);
   showGymToast('Ficha restaurada para o padrão.');
+}
+
+
+// ── REGISTRO DO SERVICE WORKER (PWA OFFLINE) ──
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then((reg) => console.log('PWA ativo!', reg.scope))
+      .catch((err) => console.warn('PWA offline falhou:', err));
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
