@@ -2731,15 +2731,16 @@ function handleModalClick(e, id){ if(e.target === document.getElementById(id)) c
 let activeAvatarData = '';
 
 function handleAvatarUpload(event){
-  const file = event.target.files[0];
+  const file = event.target.files && event.target.files[0];
   if(!file) return;
 
   const reader = new FileReader();
   reader.onload = function(e){
     const img = new Image();
     img.onload = function(){
+      // Redimensiona para 160x160 com compressão JPEG suave (~10KB)
       const canvas = document.createElement('canvas');
-      const size = 140;
+      const size = 160;
       canvas.width = size;
       canvas.height = size;
       const ctx = canvas.getContext('2d');
@@ -2749,21 +2750,30 @@ function handleAvatarUpload(event){
       const sy = (img.height - minDim) / 2;
 
       ctx.drawImage(img, sx, sy, minDim, minDim, 0, 0, size, size);
-      const optimizedBase64 = canvas.toDataURL('image/jpeg', 0.80);
+      const optimizedBase64 = canvas.toDataURL('image/jpeg', 0.82);
 
+      // Salva imediatamente para nunca perder
       activeAvatarData = optimizedBase64;
+      const p = loadProfile();
+      p.avatar = optimizedBase64;
+      saveProfile(p);
+
       updateAvatarDisplays(optimizedBase64);
-      showGymToast('Foto carregada! Clique em SALVAR 💾');
+      showGymToast('Foto salva com sucesso! 📸');
     };
     img.src = e.target.result;
   };
   reader.readAsDataURL(file);
+  event.target.value = ''; // Permite selecionar a mesma foto se quiser
 }
 
 function removeAvatarPhoto(){
   activeAvatarData = '';
+  const p = loadProfile();
+  p.avatar = '';
+  saveProfile(p);
   updateAvatarDisplays('');
-  showGymToast('Foto removida. Clique em SALVAR.');
+  showGymToast('Foto removida.');
 }
 
 function updateAvatarDisplays(avatarUrl){
@@ -2792,17 +2802,42 @@ function openProfileModal(){
 }
 
 function saveProfileData(){
-  const p = {
-    nome: document.getElementById('inputProfileName').value.trim(),
-    idade: parseInt(document.getElementById('inputProfileAge').value, 10) || '',
-    peso: parseFloat(document.getElementById('inputProfileWeight').value) || '',
-    altura: parseFloat(document.getElementById('inputProfileHeight').value) || ''
-  };
-  saveProfile(p);
-  recalcMetrics();
-  updateAthleteBanner();
-  closeModal('modalProfile');
-  showGymToast('Perfil salvo com sucesso! 💪');
+  try {
+    const p = loadProfile();
+
+    const nameInput = document.getElementById('inputProfileName');
+    const ageInput = document.getElementById('inputProfileAge');
+    const weightInput = document.getElementById('inputProfileWeight');
+    const heightInput = document.getElementById('inputProfileHeight');
+
+    if(nameInput) p.nome = nameInput.value.trim();
+    if(ageInput && ageInput.value) p.idade = parseInt(ageInput.value, 10) || '';
+
+    if(weightInput && weightInput.value){
+      const parsedPeso = parseFloat(weightInput.value.replace(',', '.'));
+      if(!isNaN(parsedPeso)) p.peso = parsedPeso;
+    }
+
+    if(heightInput && heightInput.value){
+      const parsedAltura = parseFloat(heightInput.value.replace(',', '.'));
+      if(!isNaN(parsedAltura)) p.altura = parsedAltura;
+    }
+
+    // PRESERVA OU ATUALIZA O AVATAR COM SEGURANÇA MÁXIMA
+    if(activeAvatarData !== undefined && activeAvatarData !== ''){
+      p.avatar = activeAvatarData;
+    } else if(activeAvatarData === ''){
+      p.avatar = '';
+    }
+
+    saveProfile(p);
+    recalcMetrics();
+    closeModal('modalProfile');
+    showGymToast('Perfil salvo com sucesso! 💪');
+  } catch(err) {
+    console.error('Erro ao salvar perfil:', err);
+    alert('Erro ao salvar dados: ' + err.message);
+  }
 }
 
 function wipeAllData(){
